@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-var isProduction = process.env.NODE_ENV === 'production';
-if(!isProduction){
+// var isProduction = process.env.NODE_ENV === 'production';
+if(true){
 mongoose.connect('mongodb://chandulella23:Chandu3$@ds263989.mlab.com:63989/ipac-test',{
   useNewUrlParser: true
 },
