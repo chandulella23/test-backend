@@ -1,6 +1,7 @@
 var mongoose = require('mongoose')
 var User =  mongoose.model('Users')
 var jwtService = require('./v1/auth')
+var jwt = require('jsonwebtoken');
 module.exports = {
   login: async (req, res) => {
     try {
