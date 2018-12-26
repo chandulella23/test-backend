@@ -29,5 +29,18 @@ module.exports = {
     } catch(err){
 
     }
+  },
+
+  verifyToken: async(req,res)=>{
+    try {
+      jwt.verify(req.body.token, 'chandu@sai', function(err, decoded) {
+        if (err) {
+          return res.json({verified:false})
+        }
+        return res.json({verified:true})
+      });
+    } catch (err) {
+
+    }
   }
 };
