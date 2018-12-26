@@ -11,9 +11,7 @@ module.exports = {
         console.log(data.password, user);
           return res.json({
             success: "success",
-            role:user[0].role,
-            token: jwtService.createToken(user[0]),
-            user:user[0]
+            token: jwtService.createToken(user[0])
           });
       }else{
         return res.json({ success: false });

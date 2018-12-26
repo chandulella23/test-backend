@@ -9,7 +9,9 @@ module.exports ={
         return jwt.sign({
             id: user._id,
             email: user.email,
-            role:user.role,
+            userName: user.userName,
+            role: user.role,
+            type: user.type,
             exp: parseInt(exp.getTime() / 1000),
         }, secret);
     }
